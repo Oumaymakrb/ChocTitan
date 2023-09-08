@@ -18,11 +18,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t oumaymaii/my-firstweb-app:latest .
-          docker push oumaymaii/my-firstweb-app:latest
-
+          docker build -t oumaymaii/my-first-hubrepo:latest .
+          docker push oumaymaii/my-first-hubrepo:latest  # Use the correct repository name here
+          
       - name: Log in to Docker Hub
-        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} 
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} -e scope=repository:oumaymaii/my-first-hubrepo:push
 
       - name: Push Docker image to Docker Hub
-        run: docker push oumaymaii/my-firstweb-app:latest
+        run: docker push oumaymaii/my-first-hubrepo:latest
