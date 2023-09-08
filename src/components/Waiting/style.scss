@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+
+.waiting {
+
+  .waiting-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #1D1D1D;
+      overflow: hidden;
+  }
+
+    model-viewer {
+      width: 50vw;
+      height: 50vh;
+      animation: float 2s infinite alternate;
+      margin: 0 auto;
+      --progress-bar-color: transparent;
+    }
+    
+    @keyframes float {
+      from { transform: translateY(10px); }
+      to { transform: translateY(60px); }
+    }
+
+    .content {
+      position: relative;
+      text-align: center;
+      color: #ffffffde;
+      font-family: 'poppins', sans-serif;
+      margin-bottom: 200px;
+    }
+
+    .content h3{
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    .content h3 {
+      text-shadow: 1px 1px 2px #cfcfcf;
+    }
+
+    .content h1{
+      font-size: 1.5rem;
+      font-weight: 200;
+      margin-bottom: 1rem;
+    }
+
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #555;
+      margin: 0 5px;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    
+    .dot.hidden {
+      opacity: 0;
+    }
+
+    .dot:nth-child(1) {
+      background-color: #EA4335;
+    }
+    .dot:nth-child(2) {
+      background-color: #4285F4;
+    }
+    .dot:nth-child(3) {
+      background-color: #0F9D58;
+    }
+    .dot:nth-child(4) {
+      background-color: #FBBC04;
+    }
+}

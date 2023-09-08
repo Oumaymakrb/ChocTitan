@@ -1,0 +1,39 @@
+variables:
+  CI: "false"
+
+stages:
+  - build
+  - deploy
+
+# Build stage
+build:
+  stage: build
+  image: node:14
+  script:
+    - sudo npm cache clean --force
+    - sudo rm -rf package-lock.json
+    - sudo rm -rf node_modules/
+    - npm install
+    - npm run build
+
+
+# Deploy stage
+deploy:
+  stage: deploy
+  image: docker:latest
+
+  script:
+    - sudo docker image prune -a
+    - sudo docker build -t landingp .
+    - sudo docker stop landingp_container || true
+    - sudo docker rm landingp_container || true
+    - sudo docker run -d --name landingp_container -p 8084:80 landingp
+  only:
+    - main
+  except:
+    - DEV-1
+    - AbdeelBrh
+    - MoncefAjmani
+    - Elmokhtar
+    - Doha
+    - eemy

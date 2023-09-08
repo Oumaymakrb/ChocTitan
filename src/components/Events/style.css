@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Titillium+Web:wght@300;400;700&display=swap'); .head{
+    margin-top: 50px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Montserrat:ital,wght@0,500;1,300&family=Titillium+Web:wght@300;400;700&display=swap');@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  
+
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    
+      .animated {
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+      }
+    .gd {
+        font-size: 3rem;
+        font-family: 'Helvetica Neue', sans-serif;
+        text-align: center;
+        text-decoration : bold;
+      }
+      .boddy-h {
+        height: 760Px;
+        background-color: #ffe14f;
+        margin-top: 30px;
+      }
+      .boddy-b {
+        height: 750Px;
+        background-color:#3052ab;
+      }
+     
+      .event {
+       
+        font-size: 3rem;
+        font-family: 'Helvetica Neue', sans-serif;
+        background: linear-gradient(112.82deg,#4285F4  19.93%,#4285F4 102.22%);
+        border:none;
+        padding: 20px 30px;
+        font-weight:bold;
+        color:white;
+        border-radius: 35px;
+        cursor:pointer;
+        transition: .4s ease;
+        text-transform:uppercase;
+      }
+    
+      .title-hack {
+        margin-top: 5px;
+      padding-top: 10px;
+      padding-left: 120px;
+      font-size: 3.5rem;
+      color: #1f2122;
+      font-family: 'Josefin Sans', sans-serif;
+      display: inline-block;
+      position: relative;
+    
+      }
+      .title-bootcamp {
+        margin-top: 5px;
+      padding-top: 10px;
+      padding-left: 120px;
+      font-size: 3.5rem;
+      color: white;
+      font-family: 'Josefin Sans', sans-serif;
+      display: inline-block;
+      position: relative;
+    
+      }
+      .title-hack:hover {
+        animation-name: shake;
+        animation-duration: 0.5s;
+      }
+      
+      .title-hack::before {
+        content: "";
+        display: inline-block;
+        width: 50rem;
+        height: 0.03em;
+        background-color:#1f2122;
+        margin-right: 0.5em;
+      }
+    
+      .title-hack::after {
+        content: "";
+        display: inline-block;
+        width: 1.5em; 
+        height: 1.5em;
+        background-image: url('/public/media/images/hackathon.png'); 
+        background-size: cover;
+        margin-left: 0.5em;
+      }
+      .title-bootcamp:hover {
+        animation-name: shake;
+        animation-duration: 0.5s;
+      }
+      
+      .title-bootcamp::before {
+        content: "";
+        display: inline-block;
+        width: 50rem;
+        height: 0.03em;
+        background-color:white;
+        margin-right: 0.5em;
+      }
+    
+      .title-bootcamp::after {
+        content: "";
+        display: inline-block;
+        width: 1.5em; 
+        height: 1.5em;
+        background-image: url('/public/media/images/brain.png'); 
+        background-size: cover;
+        margin-left: 0.5em;
+      }
+      .h2{
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-left: 120px;
+        font-size: 1.5rem;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        position: relative;
+    }
+    .h1{
+      margin-top: 5px;
+      padding-top: 10px;
+      padding-left: 120px;
+      font-size: 1.5rem;
+      color: #1f2122;
+      font-family: 'Montserrat', sans-serif;
+      display: inline-block;
+      position: relative;
+    }
+    table {
+        margin-top:2%;
+        margin-left:6.2%;
+        width: 80%;
+        height:25rem;
+        border-collapse: collapse;
+      }
+      
+      td {
+        padding: 0px;
+        padding-left:2%;
+        line-height: 1.5;
+      }
+      
+      .small-col {
+        width: 22%;
+      }
+      
+      .large-col {
+        width: 90%;
+        padding-left:10%;
+      }
+      
+      .white {
+        color:white !important;
+      }
+      
+      .event-title-span {
+        font-family: 'Montserrat', sans-serif;
+        margin-left :5px;
+        font-family: Arial;
+            font-size: 20px;  
+    
+      }
+    
+    
+      .card {
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        overflow: hidden;
+        background-color :white;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+      }
+      
+      .card-img-top {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+      object-position: center;
+      }
+      
+      .card-body {
+        padding: 20px;
+      
+      }
+      
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .card-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      
+      .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+      
+     
+     
+      
+      @media only screen and (max-width: 700px){
+        .table {
+          display: block;
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          white-space: nowrap;
+        }
+        .small-col {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        .large-col {
+          display: block;
+          width: 100%;
+          margin-top: 20px;
+          text-align: center;
+        }
+        .card {
+          display: inline-block;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .title-hack::before {
+       
+          width: 0rem;
+        
+        }
+        .boddy-h {
+          height: 100%;
+        }
+        .boddy-b {
+          height: 100%;
+        }
+        .title-bootcamp::before {
+    
+          width: 0rem;
+        
+        }
+        .title-bootcamp{
+    
+          width: 0rem;
+          text-align: center;
+        }
+        .title-hack{
+    
+          width: 0rem;
+          text-align: center;
+        }
+         
+        .h2{
+          font-size: 36px;
+          line-height: 42px;
+          text-align: center;
+          padding-left: 10px;
+      }
+      .h1{
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        padding-left: 10px;
+
+      }
+      .title-bootcamp::after {
+       visibility : hidden;
+      }
+      .title-hack::after {
+        visibility : hidden;
+       }
+      }
+
+      

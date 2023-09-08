@@ -1,0 +1,138 @@
+
+   *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    
+   }
+
+   #gdsc{
+    animation: down 2.5s infinite alternate;
+  }
+
+  @keyframes down {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(20px); }
+  }
+
+    .hero-container{
+        width: fit-content;
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .hero-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .hero-col-1 {
+        flex-basis: 60%;
+        position: relative;
+        margin: 50px;
+    }
+    
+    .hero-col-1 h2 {
+        font-size: 54px;
+        color: black;
+    }
+    
+    .hero-col-1 h3 {
+        font-size: 30px;
+        color: #000000;
+        font-weight: 100;
+        margin: 20px 0 10px;
+    }
+    
+    .hero-col-1 p {
+        font-size: 16px;
+        color: #444242;
+        font-weight: 100;
+    }
+    
+    .hero-col-1::after{
+        content: '';
+        width: 10px;
+        height: 60%;
+        background: linear-gradient(#379aeb, #d9def1);
+        position: absolute;
+        left: -40px;
+        top: 40px;
+        border-radius: 30px;
+    }
+    
+    .hero-col-2{
+        position: relative;
+        flex-basis: 40%;
+        display: flex;
+        align-items: center;
+    }
+
+    .modelgdsc{
+        width: 400px;
+        height: 400px;
+    }
+
+    .icons i {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        border: .2rem solid var(--blue-color);
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--blue-color);
+        margin: 1rem 1rem 1rem 0;
+      }
+    
+      .icons i:hover {
+        background: var(--main-color);
+        color: var(--red-color);
+        box-shadow: 0 0 1rem var(--green-color);
+        border: .2rem solid var(--yellow-color);
+      }
+    
+    model-viewer{
+        --progress-bar-color: transparent;
+    }
+
+    
+    
+    @media only screen and (max-width: 700px) {
+        .hero-row {
+            flex-direction: column-reverse;
+            margin: 50px 0;
+        }
+    
+        .hero-col-2 {
+            flex-basis: 100%;
+        }
+    
+        .modelgdsc{
+            width: 300px;
+            height: 300px;
+        }
+    
+        .hero-color-box {
+            transform: translateX(75px);
+        }
+    
+        .hero-col-1 {
+            flex-basis: 100%;
+            margin: 0px 50px;
+        }
+    
+        .hero-col-1 h2 {
+            font-size: 35px;
+        }
+    
+        .hero-col-1 h3 {
+            font-size: 15px;
+        }
+    }
