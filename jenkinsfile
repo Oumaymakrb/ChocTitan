@@ -5,17 +5,16 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                   
                     def dockerImage = 'oumaymaii/app_gitlab_choctitan'
                     def dockerTag = 'latest' 
 
                    
-                    docker.build("${dockerImage}:${dockerTag}")
+                    def customImage = docker.build("${dockerImage}:${dockerTag}")
 
-                    
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                
+                    customImage.withRegistry([credentialsId: 'f06b7ac1-6365-48f4-88ca-e5d97678739a', url: 'https://index.docker.io/v1/']) {
                      
-                        docker.image("${dockerImage}:${dockerTag}").push()
+                        customImage.push()
                     }
                 }
             }
