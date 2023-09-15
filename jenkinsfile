@@ -8,11 +8,11 @@ pipeline {
                     def dockerImage = 'oumaymaii/app_gitlab_choctitan'
                     def dockerTag = 'latest'
 
-                  
-                    sh 'docker build -t ${dockerImage}:${dockerTag} .'
+                    
+                    sh "docker build -t ${dockerImage}:${dockerTag} ."
 
-                    withDockerRegistry([credentialsId: 'f06b7ac1-6365-48f4-88ca-e5d97678739a'', url: '']) {
-               
+                   
+                    withDockerRegistry([credentialsId: 'f06b7ac1-6365-48f4-88ca-e5d97678739a', url: '']) {
                         sh "docker push ${dockerImage}:${dockerTag}"
                     }
                 }
